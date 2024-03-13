@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://Hazman97.github.io/Hazman97.github.io/",
+  "homepage": "https://hazman97.github.io/",
+
   "scripts": {
     "deploy": "gh-pages -d dist",
     "dev": "vite",

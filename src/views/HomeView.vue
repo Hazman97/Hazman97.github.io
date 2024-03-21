@@ -3,9 +3,11 @@
     <header
       class="lg:px-16 px-6 bg-white flex flex-wrap items-center p-4 py-3 lg:py-0 py-2 lg:px-40"
     >
-      <div class="flex-1 flex justify-between items-center">
+      <div class="flex-1 flex justify-between items-center dark:text-white">
         <a href="https://hazman97.github.io"> Hazman Adanan </a>
       </div>
+      <!-- <div class="bg-green-700 sm:bg-blue-600 md:bg-red-900 lg:bg-yellow-400 xl:bg-purple-200 2xl:bg-slate-200">test</div> -->
+
 
       <label for="menu-toggle" class="pointer-cursor lg:hidden block p-4 py-2" @click="toggleMenu">
         <svg
@@ -32,11 +34,7 @@
         <nav>
           <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
             <li>
-              <theme-switcher
-                :theme="theme"
-                @themeChanged="updateTheme"
-                class="block sm:hidden bg-ternary-light dark:bg-ternary-dark hover:bg-hover-light dark:hover:bg-hover-dark hover:shadow-sm px-2.5 py-2 rounded-lg"
-              />
+            <darkmode class="hidden 2xl: xl: lg:block md:hidden sm: " />
             </li>
             <li>
               <a
@@ -155,8 +153,14 @@
 </template>
 
 <script>
-
+import darkmode from '../components/ThemeSwitcher.vue'
 export default {
+
+  components:{
+    darkmode,
+  },
+
+  name: "maskformdsdasVidsadews",
   data() {
     return {
       menuOpen: false

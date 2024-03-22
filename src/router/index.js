@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import darkmode from "../components/ThemeSwitcher.vue"
+import template from '../views/template.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/darkmode',
       name: 'darkmode',
       component: darkmode
+    },
+    {
+      path: '/code',
+      name: 'template',
+      component: template
     },
     {
       path: '/about',

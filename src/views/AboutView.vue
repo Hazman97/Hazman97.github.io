@@ -14,19 +14,19 @@
             <div class="flex justify-end ">
               <label
                 @click="selectedTab = 'something'"
-                :class="{ 'bg-blue-600 text-white': selectedTab === 'something' }"
+                :class="{ 'bg-blue-500 text-white': selectedTab === 'something' }"
                 class="flex justify-center cursor-pointer rounded-l-2xl border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 hover:text-slate-500 focus:outline-none transition-all duration-500 ease-in-out"
                 >Something</label
               >
               <label
                 @click="selectedTab = 'about'"
-                :class="{ 'bg-blue-600 text-white': selectedTab === 'about' }"
+                :class="{ 'bg-blue-500 text-white': selectedTab === 'about' }"
                 class="flex justify-center cursor-pointer  border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
                 >About</label
               >
               <label
                 @click="selectedTab = 'details'"
-                :class="{ 'bg-blue-600 text-white': selectedTab === 'details' }"
+                :class="{ 'bg-blue-500 text-white': selectedTab === 'details' }"
                 class="flex justify-center cursor-pointer rounded-r-2xl border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
                 >Details</label
               >
@@ -122,7 +122,7 @@
 export default {
   data() {
     return {
-      selectedTab: 'something'
+      selectedTab: ''
     }
   }
 }

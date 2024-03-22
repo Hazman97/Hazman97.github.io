@@ -11,28 +11,28 @@
         >
           <h2 class="text-2xl font-bold text-gray-700 capitalize dark:text-white">lapor wei</h2>
           <div class="justify-center items-center">
-            <div class="flex justify-end">
+            <div class="flex justify-end ">
               <label
                 @click="selectedTab = 'something'"
                 :class="{ 'bg-blue-600 text-white': selectedTab === 'something' }"
-                class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
+                class="flex justify-center cursor-pointer rounded-l-2xl border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 hover:text-slate-500 focus:outline-none transition-all duration-500 ease-in-out"
                 >Something</label
               >
               <label
                 @click="selectedTab = 'about'"
                 :class="{ 'bg-blue-600 text-white': selectedTab === 'about' }"
-                class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
+                class="flex justify-center cursor-pointer  border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
                 >About</label
               >
               <label
                 @click="selectedTab = 'details'"
                 :class="{ 'bg-blue-600 text-white': selectedTab === 'details' }"
-                class="flex justify-center cursor-pointer rounded-full border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
+                class="flex justify-center cursor-pointer rounded-r-2xl border border-gray-300 bg-white py-2 px-4 hover:bg-gray-50 focus:outline-none transition-all duration-500 ease-in-out"
                 >Details</label
               >
             </div>
             <div class="flex items-center justify-center">
-              <ul class="mx-auto px-8 justify-end">
+              <ul class="mx-auto px-8 justify-end relative">
                 <li v-if="selectedTab === 'something'" class="">
                   <input
                     class="peer sr-only"
@@ -53,6 +53,9 @@
                     Sequi consequatur error nulla quaerat rem fugit provident tempore nihil a
                     aspernatur ad laboriosam, dolor nisi qui? Esse, mollitia? Nostrum? Lorem ipsudm
                     dolor sit amet consectetur adipisicing elit. Perspiciatis, voluptatum! Sequi
+                    dadsadjasd jdajda djak djkajd sakjd sakkasj kdsajddjkasjd a ksajd ka sd
+
+                    <button class="absolute right-10 border-indigo-300 -bottom-9 mt-3 w-full inline-flex justify-center rounded-b-2xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"> Save </button>
                 
                   </div>
                 </li>
@@ -70,6 +73,8 @@
                     amet condsectetur adipisicing elit. Perspiciatis, voluptatum! Sequi consequatur
                     error nulla quaerat rem fugit provident tempore nihil a aspernatur ad
                     laboriosam, dolor nisi qui? Esse, mollitia? Nostrum?
+                    <button class="absolute right-10 border-indigo-300 -bottom-9 mt-3 w-full inline-flex justify-center rounded-b-2xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"> Save </button>
+                
                   </div>
                 </li>
                 <li v-else class="">
@@ -100,6 +105,8 @@
                     amet condsectetur adipisicing elit. Perspiciatis, voluptatum! Sequi consequatur
                     error nulla quaerat rem fugit provident tempore nihil a aspernatur ad
                     laboriosam, dolor nisi qui? Esse, mollitia? Nostrum?
+                    <button class="absolute right-10 border-indigo-300 -bottom-9 mt-3 w-full inline-flex justify-center rounded-b-2xl border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"> Save </button>
+                
                   </div>
                 </li>
               </ul>
@@ -115,7 +122,7 @@
 export default {
   data() {
     return {
-      selectedTab: ''
+      selectedTab: 'something'
     }
   }
 }

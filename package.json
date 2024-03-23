@@ -12,7 +12,7 @@
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
+    "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },
   "dependencies": {
     "firebase": "^10.9.0",

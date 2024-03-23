@@ -25,12 +25,14 @@
           <label for="templatePreview" class="block text-gray-700 font-semibold mb-1">Preview:</label>
           <textarea id="templatePreview" v-model="newTemplate.preview" rows="3" class="w-full rounded-md p-2 border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500"></textarea>
         </div>
+        
         <div class="mt-4">
           <button @click="submit" class="bg-gray-800 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-900">
             Add Template
           </button>
         </div></form>
       </div>
+      
   
        <!-- Display Templates -->
     <div v-for="(template, index) in templates" :key="index" class="mb-8 rounded-lg border border-gray-300 overflow-hidden">
@@ -55,7 +57,7 @@
 
 <script>
 import db from '@/firebase.js'; // Adjust the path if necessary
-import { collection, getDocs, addDoc } from 'firebase/firestore';
+import { collection, getDocs, addDoc, serverTimestamp, orderBy, query } from 'firebase/firestore';
 
 export default {
   data() {
@@ -75,15 +77,18 @@ export default {
   },
   methods: {
     async fetchData() {
-      try {
-        const querySnapshot = await getDocs(collection(db, 'templates'));
-        querySnapshot.forEach((doc) => {
-          this.templates.push({ id: doc.id, ...doc.data() });
-        });
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    },
+  try {
+    const q = query(collection(db, 'templates'), orderBy('createdAt', 'desc'));
+    const querySnapshot = await getDocs(q);
+    querySnapshot.forEach((doc) => {
+      this.templates.push({ id: doc.id, ...doc.data() });
+    });
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+},
+
+
     async addTemplate() {
       try {
     
@@ -91,7 +96,8 @@ export default {
           title: this.newTemplate.title,
           description: this.newTemplate.description,
           html: this.newTemplate.html,
-          preview: this.newTemplate.preview
+          preview: this.newTemplate.preview,
+          createdAt: serverTimestamp() // Automatically set the timestamp
         });
         console.log("Document written with ID: ", docRef.id);
         this.templates.push({ ...this.newTemplate, id: docRef.id });

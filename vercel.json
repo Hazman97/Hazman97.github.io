@@ -1,11 +1,8 @@
 {
-  "build": {
-    "env": {
-      "BUILD_TAILWIND": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
-    },
+
     "rewrites": [
       { "source": "/(.*)", "destination": "/index.html" }
     ]
   }
   
-}
+

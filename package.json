@@ -13,7 +13,7 @@
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
-    "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
 
  
   },

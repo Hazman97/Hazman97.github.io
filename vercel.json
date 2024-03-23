@@ -1,3 +1,14 @@
 {
-    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "build": {
+    "env": {
+      "BUILD_TAILWIND": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    },
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
+    ]
+  },
+  "scripts": {
+    "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npm run build:tailwind && your-other-build-script-here"
   }
+}

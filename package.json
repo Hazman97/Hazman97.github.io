@@ -11,7 +11,8 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./dist/output.css"
   },
   "dependencies": {
     "firebase": "^10.9.0",

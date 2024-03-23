@@ -32,8 +32,7 @@
           </button>
         </div></form>
       </div>
-      <div class="bg-pink-500 text-white p-2">Lurve alis ketat2</div>
- 
+     
   
        <!-- Display Templates -->
     <div v-for="(template, index) in templates" :key="index" class="mb-8 rounded-lg border border-gray-300 overflow-hidden">

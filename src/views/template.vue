@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto max-w-lg p-4">
+  <div class="mx-auto max-w-full 2xl:max-w-2xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm p-4">
     <div class="text-center mb-8">
       <h1 class="text-3xl font-bold mb-2">Template Manager</h1>
       <p class="text-gray-600">Manage your templates</p>
@@ -45,6 +45,7 @@
               <pre class="whitespace-pre-wrap overflow-x-auto max-w-full rounded-lg border border-gray-300  bg-slate-200 overflow-y-auto max-h-80 p-2">
                 <code class="language-html">{{ template.html }}</code>
               </pre>
+              <button @click="copyCode(template.html)" class="absolute top-0 right-0 m-2 bg-blue-500 text-white px-2 py-1 rounded-md shadow-md hover:bg-blue-600 focus:outline-none">Copy</button>
             </div>
             <hr class="my-4">
           <h3 class="text-lg font-semibold mb-2">Preview:</h3>

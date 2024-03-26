@@ -8,18 +8,17 @@
     "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
-
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/",
     "build:tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
-
- 
   },
   "dependencies": {
     "firebase": "^10.9.0",
     "vue": "^3.4.15",
+    "vue-org-tree": "^0.1.0",
+    "vue-organization-chart": "^1.1.6",
     "vue-router": "^4.2.5",
     "vuex": "^4.1.0"
   },

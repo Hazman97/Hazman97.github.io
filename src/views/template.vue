@@ -1,33 +1,33 @@
-<template>
-  <div class="mx-auto max-w-full 2xl:max-w-2xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm p-4">
+<template class="">
+  <div class="mx-auto max-w-full 2xl:max-w-2xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm p-4 bg-gradient-to-b from-[#d3e3ea] to-[#D0DCE1]">
     <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold mb-2">Template Manager</h1>
-      <p class="text-gray-600">Manage your templates</p>
+      <h1 class="text-3xl font-bold mb-2 text-[#233945]">Template Manager</h1>
+      <p class="text-[#233945]">Manage your templates</p>
     </div>
 
     <!-- Add New Template Section -->
     <div class="mb-8">
-      <h2 class="text-xl font-semibold mb-2">Add New Template</h2>
+      <h2 class="text-xl font-semibold mb-2 text-[#233945]">Add New Template</h2>
       <form @submit.prevent="addTemplate">
         <div>
-          <label for="templateTitle" class="block text-gray-700 font-semibold mb-1 ">Template Title:</label>
+          <label for="templateTitle" class="block text-[#233945] font-semibold mb-1 ">Template Title:</label>
           <input type="text" id="templateTitle" required v-model="newTemplate.title" class="w-full p-2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500">
         </div>
         <div class="mt-4">
-          <label for="templateDescription" class="block text-gray-700 font-semibold mb-1">Template Description:</label>
+          <label for="templateDescription" class="block text-[#233945] font-semibold mb-1">Template Description:</label>
           <textarea id="templateDescription" required v-model="newTemplate.description" rows="3" class="w-full  p-2 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500"></textarea>
         </div>
         <div class="mt-4">
-          <label for="templateHTML" class="block text-gray-700 font-semibold mb-1">HTML Code:</label>
+          <label for="templateHTML" class="block text-[#233945] font-semibold mb-1">HTML Code:</label>
           <textarea id="templateHTML" required v-model="newTemplate.html" rows="6" class="w-full rounded-md p-2 border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500"></textarea>
         </div>
         <div class="mt-4">
-          <label for="templatePreview" class="block text-gray-700 font-semibold mb-1">Preview:</label>
+          <label for="templatePreview" class="block text-[#233945] font-semibold mb-1">Preview:</label>
           <textarea id="templatePreview" v-model="newTemplate.preview" rows="3" class="w-full rounded-md p-2 border-gray-300 shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500"></textarea>
         </div>
 
         <div class="mt-4">
-          <button type="submit" class="bg-gray-800 text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-900">
+          <button type="submit" class="bg-[#3E5A69] text-white py-2 px-4 rounded-md shadow-md hover:bg-gray-900">
             Add Template
           </button>
         </div>
@@ -36,10 +36,10 @@
 
     <!-- Display Templates -->
     <div v-for="template in templates" :key="template.id" class="mb-8 rounded-lg border border-gray-300 overflow-hidden">
-      <div class="p-4 bg-gray-100">
+      <div class="p-4 bg-gradient-to-b from-[#FCFDFE] to-">
         <template v-if="!template.editMode">
-          <h2 class="text-xl font-semibold mb-2">{{ template.title }}</h2>
-          <p class="text-gray-700">{{ template.description }}</p>
+          <h2 class="text-xl font-semibold mb-2 text-[#233945]">{{ template.title }}</h2>
+          <p class="text-[#576A73]">{{ template.description }}</p>
           <div class="p-4">
             <div class="relative mb-4">
               <pre class="whitespace-pre-wrap overflow-x-auto max-w-full rounded-lg border border-gray-300  bg-slate-200 overflow-y-auto max-h-80 p-2">

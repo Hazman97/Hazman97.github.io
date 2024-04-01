@@ -1,11 +1,12 @@
 <template>
   <div class="antialiased bg-gray-400 sticky top-0">
     <header
-      class="lg:px-16 px-6 bg-white flex flex-wrap items-center p-4 py-3 lg:py-0 py-2 lg:px-40"
+      class="lg:px-16 px-6 bg-white flex flex-wrap items-center p-4 py-3 lg:py-0 py-2 lg:px-40 dark:bg-black"
     >
-      <div class="flex-1 flex justify-between items-center dark:text-white">
+      <div class="flex-1 flex justify-between items-center dark:text-slate-200">
         <a href="https://hazman97.github.io"> Hazman Adanan </a>
       </div>
+      
       <!-- <div class="bg-green-700 sm:bg-blue-600 md:bg-red-900 lg:bg-yellow-400 xl:bg-purple-200 2xl:bg-slate-200">test</div> -->
 
 
@@ -32,7 +33,7 @@
         id="menu"
       >
         <nav>
-          <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0">
+          <ul class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0 dark:text-slate-400">
             <li>
             <darkmode class="hidden 2xl: xl: lg:block md:hidden sm: " />
             </li>
@@ -76,14 +77,14 @@
       </div>
     </header>
   </div>
-  <main class="bg-gray-200 min-h-screen flex justify-center items-center">
+  <main class="bg-gray-200 min-h-screen flex justify-center items-center dark:bg-[#151618]">
     <div class="max-w-4xl mx-auto px-4">
       <!-- Home Section -->
-      <div class="bg-slate-200">
+      <div class="bg-slate-200 dark:bg-[#151618]">
         <div class="my-5 min-h-screen flex flex-wrap justify-center items-center">
           <section class="text-center flex-initial w-full sm:w-3/4 px-4" id="home">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">Hi there!</h1>
-            <p class="text-lg text-gray-700 mb-8">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-slate-200">Hi there!</h1>
+            <p class="text-lg text-gray-700 mb-8 dark:text-slate-400">
               I'm a front-end enthusiast gaining practical experience in the field. After completing
               an internship, I've transitioned into a role as a Front End Developer. Passionate
               about web development, I'm also intrigued by networking and computer support
@@ -103,7 +104,7 @@
       </div>
     </div>
   </main>
-  <main class="bg-gray-100 max-h-screen flex justify-start items-start">
+  <main class="bg-gray-100 max-h-screen flex justify-start items-start dark:bg-[#232426] dark:text-slate-300">
     <div class="max-w-4xl 2xl:mx-40 xl:mx-40 mx-auto px-4">
       <!-- About Section -->
       <section class="py-20" id="about">
@@ -115,7 +116,7 @@
       </section>
     </div>
   </main>
-  <main class="bg-gray-200 min-h-screen flex justify-start items-start">
+  <main class="bg-gray-200 min-h-screen flex justify-start items-start dark:bg-[#151618] dark:text-slate-300">
     <div class="max-w-4xl 2xl:mx-40 xl:mx-40 mx-auto px-4">
       <!-- Experience -->
       <section class="mt-12" id="Experience">
@@ -124,7 +125,7 @@
       </section>
     </div>
   </main>
-  <main class="bg-gray-100 min-h-screen flex justify-start items-start">
+  <main class="bg-gray-100 min-h-screen flex justify-start items-start dark:bg-[#151618] dark:text-slate-300">
     <div class="max-w-4xl 2xl:mx-40 xl:mx-40 mx-auto px-4">
       <!-- Resume Section -->
       <section class="mt-12" id="Project">
@@ -133,7 +134,7 @@
       </section>
     </div>
   </main>
-  <main class="bg-gray-200 min-h-screen flex justify-start items-start">
+  <main class="bg-gray-200 min-h-screen flex justify-start items-start dark:bg-[#232426] dark:text-slate-300">
     <div class="max-w-4xl 2xl:mx-40 xl:mx-40 mx-auto px-4">
       <!-- Contact Section -->
       <section class="mt-12" id="Education">
@@ -142,7 +143,7 @@
       </section>
     </div>
   </main>
-  <main class="bg-gray-100 min-h-screen flex justify-start items-start">
+  <main class="bg-gray-100 min-h-screen flex justify-start items-start dark:bg-[#151618] dark:text-slate-300">
     <div class="max-w-4xl 2xl:mx-40 xl:mx-40 mx-auto px-4">
       <section class="mt-12" id="Skill">
         <h2 class="text-2xl font-semibold mb-4">Skill</h2>
@@ -164,6 +165,7 @@ export default {
   data() {
     return {
       menuOpen: false
+      
     }
   },
   methods: {

@@ -4,10 +4,16 @@ import darkmode from "../components/ThemeSwitcher.vue"
 import template from '../views/template.vue'
 import templateAlis from '../views/templateAlis.vue'
 import chart from '../views/organizationchart.vue'
+import OrgChart from '../views/OrgChart.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/orgchart',
+      name: 'orgchart',
+      component: OrgChart
+    },
     {
       path: '/',
       name: 'home',

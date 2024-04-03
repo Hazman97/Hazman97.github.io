@@ -1,69 +1,54 @@
 <template>
-    <div class="org-chart">
-      <div v-for="node in nodes" :key="node.id" :style="{ marginLeft: node.level * 20 + 'px' }">
-        <div>{{ node.name }} - {{ node.title }}</div>
-        <button @click="addChildNode(node)">Add Child</button>
-        <button @click="deleteNode(node)">Delete</button>
-      </div>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    props: {
-      nodes: {
-        type: Array,
-        required: true
-      }
-    },
-    methods: {
-      addChildNode(parentNode) {
-        const newNode = {
-          id: Math.random().toString(36).substr(2, 9),
-          name: 'New Employee',
-          title: 'New Title',
-          level: parentNode.level + 1
-        };
-        if (!parentNode.children) {
-          this.$set(parentNode, 'children', []);
-        }
-        parentNode.children.push(newNode);
-        this.$emit('node-added', this.nodes);
-      },
-      deleteNode(nodeToDelete) {
-        const parentNode = this.findParentNode(nodeToDelete, this.nodes);
-        if (parentNode) {
-          parentNode.children = parentNode.children.filter(node => node.id !== nodeToDelete.id);
-          this.$emit('node-deleted', this.nodes);
-        } else {
-          this.$emit('node-deleted', this.nodes.filter(node => node.id !== nodeToDelete.id));
-        }
-      },
-      findParentNode(node, nodeList) {
-        for (const item of nodeList) {
-          if (item.children && item.children.includes(node)) {
-            return item;
-          }
-          if (item.children) {
-            const found = this.findParentNode(node, item.children);
-            if (found) return found;
-          }
-        }
-        return null;
-      }
+  <div>
+    <organization-chart :datasource="ds"></organization-chart>
+  </div>
+</template>
+
+<script>
+import OrganizationChart from 'vue3-organization-chart'
+import 'vue3-organization-chart/dist/orgchart.css'
+
+export default {
+  components: {
+    OrganizationChart
+  },
+  data() {
+    return {
+      employees: [
+        { id: '1', name: 'Hazman', position: 'CEO' },
+        { id: '2', name: 'Hamid', refer_to: 'Hazman' },
+        // Add more employees as needed
+      ],
+      hierarchy: [
+        { id: '1', children: ['2'] },
+        // Add more hierarchical relationships as needed
+      ],
+      ds: {}
     }
-  };
-  </script>
-  
-  <style scoped>
-  .org-chart {
-    font-family: Arial, sans-serif;
+  },
+  created() {
+    // Constructing the datasource based on the provided data
+    this.ds = {
+      id: '1',
+      name: this.employees.find(employee => employee.position === 'CEO').name,
+      title: this.employees.find(employee => employee.position === 'CEO').position,
+      children: this.getChildren('1')
+    }
+  },
+  methods: {
+    getChildren(id) {
+      const childrenIds = this.hierarchy.find(entry => entry.id === id).children
+      const children = childrenIds.map(childId => {
+        const employee = this.employees.find(employee => employee.id === childId)
+        return {
+          id: employee.id,
+          name: employee.name,
+          title: employee.position,
+          children: this.getChildren(employee.id) // Recursively get children
+        }
+      })
+      return children
+    }
   }
-  .org-chart > div {
-    margin-bottom: 10px;
-  }
-  .org-chart button {
-    margin-left: 10px;
-  }
-  </style>
-  
+}
+</script>

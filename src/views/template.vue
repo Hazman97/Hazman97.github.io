@@ -298,7 +298,8 @@ async initAuth() {
         userId: this.user.uid // Assign user ID to the template
       });
       console.log('Document written with ID: ', docRef.id);
-      this.templates.push({ ...this.newTemplate, id: docRef.id });
+      // Add the new template at the beginning of the array
+      this.templates.unshift({ ...this.newTemplate, id: docRef.id });
     } else {
       // If user is not logged in, add template without user-specific data
       const docRef = await addDoc(collection(db, 'templates'), {
@@ -310,13 +311,15 @@ async initAuth() {
         createdAt: serverTimestamp() // Automatically set the timestamp
       });
       console.log('Document written with ID: ', docRef.id);
-      this.templates.push({ ...this.newTemplate, id: docRef.id });
+      // Add the new template at the beginning of the array
+      this.templates.unshift({ ...this.newTemplate, id: docRef.id });
     }
     this.resetNewTemplate();
   } catch (error) {
     console.error('Error adding document: ', error);
   }
 },
+
 
     editTemplate(template) {
       // Set the editMode property of the template to true

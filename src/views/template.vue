@@ -11,7 +11,7 @@
                         </svg>
                         <p class="text-base font-medium ml-4 text-gray-700">Continue with Google</p>
                     </button>
-    <button 
+    <button  
       v-if="user"
       @click="signOut"
       class="bg-red-500 text-white py-2 px-4 rounded-md shadow-md hover:bg-red-600 focus:outline-none justify-end"

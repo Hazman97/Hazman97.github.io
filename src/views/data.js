@@ -2,7 +2,7 @@ const employees = [
     {
       id: 1,
       parentId: "",
-      name: "John",
+      name: "Bigboss",
       positionName: "CEO",
       phone: "99887766",
       email: "employee@email.com",
@@ -16,7 +16,7 @@ const employees = [
     {
       id: 2,
       parentId: "1",
-      name: "Smith",
+      name: "HAZMAN SAmple",
       positionName: "COO",
       phone: "99887766",
       email: "employee@email.com",

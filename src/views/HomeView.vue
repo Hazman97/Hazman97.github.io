@@ -36,7 +36,7 @@
             class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0 dark:text-slate-400"
           >
             <li>
-              <darkmode class="block 2xl:hidden xl:hidden lg:block md:hidden sm:block" />
+              <darkmode class="block " />
             </li>
             <li>
               <a

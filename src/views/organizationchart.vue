@@ -25,7 +25,8 @@
 
 <script>
 import { OrgChart } from 'd3-org-chart'
-import axios from 'axios'
+// import axios from 'axios'
+import employeesData from '../views/data'
 
 export default {
   name: 'TestComponent',
@@ -42,17 +43,27 @@ export default {
   },
   methods: {
     fetchData() {
-      axios
-        .get('http://localhost:3000/employees')
-        .then((response) => {
-          console.log('Fetched data:', response.data)
-          this.data = response.data
-          this.renderChart()
-        })
-        .catch((error) => {
-          console.error('Error fetching data:', error)
-        })
-    },
+    //   axios
+    //     .get('http://localhost:3000/employees')
+    //     .then((response) => {
+    //       console.log('Fetched data:', response.data)
+    //       this.data = response.data
+    //       this.renderChart()
+    //     })
+    //     .catch((error) => {
+    //       console.error('Error fetching data:', error)
+    //     })
+    // },
+    Promise.resolve(employeesData)
+    .then((data) => {
+      console.log('Fetched data:', data);
+      this.data = data;
+      this.renderChart();
+    })
+    .catch((error) => {
+      console.error('Error fetching data:', error);
+    });
+},
     renderChart() {
       if (!this.chartReference) {
         this.chartReference = new OrgChart()

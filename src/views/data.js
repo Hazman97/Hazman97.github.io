@@ -8,7 +8,21 @@ const employees = [
       email: "employee@email.com",
       team: "",
       location: "LA Branch",
-      department: "",
+      department: "ict",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
+    },
+    {
+      id: 30,
+      parentId: "1",
+      name: "huda",
+      positionName: "intern",
+      phone: "99887766",
+      email: "employee@email.com",
+      team: "",
+      location: "LA Branch",
+      department: "ict",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       imageUrl: "https://randomuser.me/api/portraits/men/1.jpg",
@@ -22,7 +36,7 @@ const employees = [
       email: "employee@email.com",
       team: "",
       location: "LA Branch",
-      department: "",
+      department: "ict",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       imageUrl: "https://randomuser.me/api/portraits/men/20.jpg",
     },
@@ -36,7 +50,7 @@ const employees = [
       email: "employee@email.com",
       team: "",
       location: "LA Branch",
-      department: "",
+      department: "ict",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       imageUrl: "https://randomuser.me/api/portraits/women/3.jpg",
     },
@@ -44,6 +58,7 @@ const employees = [
       id: 4,
       parentId: "6",
       team: "HR team",
+      department: "Marketing",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     },
     {
@@ -77,6 +92,7 @@ const employees = [
       parentId: "5",
       team: "Developers",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      department: "Marketing",
     },
     {
       id: 8,
@@ -118,19 +134,7 @@ const employees = [
       imageUrl: "https://randomuser.me/api/portraits/men/10.jpg",
     },
   
-    {
-      id: 11,
-      parentId: "1",
-      name: "James",
-      positionName: "CGO",
-      phone: "99887766",
-      email: "employee@email.com",
-      team: "",
-      location: "LA Branch",
-      department: "",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: "https://randomuser.me/api/portraits/men/7.jpg",
-    },
+   
     {
       id: 12,
       parentId: "4",

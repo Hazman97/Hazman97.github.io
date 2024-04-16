@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {},
+    screens:{
+      'search':'1352px'
+    }
   },
   plugins: [],
 

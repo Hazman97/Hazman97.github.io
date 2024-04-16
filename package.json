@@ -21,6 +21,8 @@
     "d3-flextree": "^2.1.2",
     "d3-org-chart": "^3.1.1",
     "firebase": "^10.9.0",
+    "html2canvas": "^1.1.4",
+    "jspdf": "^2.3.1",
     "primeicons": "^6.0.1",
     "primevue": "^3.50.0",
     "vue": "^3.4.15",

@@ -12,7 +12,7 @@
     >
       Organization Chart
     </h1>
-    <div class="space-x-3 p-1 relative space-y-1">
+    <div class="space-x-3 p-1 relative space-y-1 ">
       <button
         class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="fitChart"
@@ -69,11 +69,11 @@
       >
         Export PDF
       </button>
-      <button @click="showAddNodeModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      <button @click="showAddNodeModal" class="bg-[#032539] hover:bg-[#032539c7] text-[#FBF3F2] border rounded-lg p-1.5">
       Add Node to Root
     </button>
       <div class="flex pt-1 search:right-2 search:top-2 search:absolute">
-         <input class="p-2"
+         <input class="p-2  rounded "
       type="text"
       placeholder="Search..."
       v-model="searchQuery"
@@ -99,13 +99,15 @@
           <input type="text" id="nodeNameda" v-model="newNode.parentId" class="border rounded-md px-4 py-2 w-full">
         </div>
         <!-- Add more input fields for other properties if needed -->
-        <button @click="addNodeToRoot" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <button @click="addNodeToRoot" class="bg-[#FA991C] hover:bg-[#FA991C] text-white font-bold py-2 px-4 rounded">
           Add Node
         </button>
       </div>
     </div>
 
-    <div ref="chartContainer"></div>
+    <div ref="chartContainer">
+      
+    </div>
   </div>
 </template>
 

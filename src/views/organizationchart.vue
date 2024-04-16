@@ -182,7 +182,7 @@ export default {
         .compactMarginPair(() => 30)
         .neighbourMargin(() => 20)
         .nodeContent((d) => {
-          const color = '#FFFFFF';
+          const color = '#FBF3F2';
           const imageDiffVert = 25 + 2;
           return `
             <div style='width:${d.width}px;height:${d.height}px;padding-top:${imageDiffVert - 2}px;padding-left:1px;padding-right:1px'>
@@ -191,7 +191,7 @@ export default {
                 <div style="background-color:${color};margin-top:${-imageDiffVert - 20}px;margin-left:${15}px;border-radius:100px;width:50px;height:50px;"></div>
                 <div style="margin-top:${-imageDiffVert - 20}px;"><img src="${d.data.imageUrl}" style="margin-left:${20}px;border-radius:100px;width:40px;height:40px;" /></div>
                 <div style="font-size:15px;color:#08011E;margin-left:20px;margin-top:10px">${d.data.name}</div>
-                <div style="color:#716E7B;margin-left:20px;margin-top:3px;font-size:10px;">${d.data.department}</div>
+                <div style="color:#9C8321;margin-left:20px;margin-top:3px;font-size:10px;">${d.data.department}</div>
                 <div style="color:#716E7B;margin-left:10px;margin-top:10px;font-size:6px;">${d.data.description}</div>
               </div>
             </div>

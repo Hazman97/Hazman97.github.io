@@ -21,26 +21,26 @@
       </button>
 
       <button
-        class="border rounded-lg p-1.5 border-gray-500border rounded-lg p-2 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="cycleLayout"
       >
         Change Layout
       </button>
 
       <button
-        class="border rounded-lg p-1.5 border-gray-500border rounded-lg p-2 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="fullscreen"
       >
         Full Screen
       </button>
       <button
-        class="border rounded-lg p-1.5 border-gray-500border rounded-lg p-2 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="expandAllNodes"
       >
         Expand All
       </button>
       <button
-        class="border rounded-lg p-1.5 border-gray-500border rounded-lg p-2 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="collapseAllNodes"
       >
       Collapse All
@@ -183,16 +183,17 @@ export default {
         .neighbourMargin(() => 20)
         .nodeContent((d) => {
           const color = '#FBF3F2';
+          
           const imageDiffVert = 25 + 2;
           return `
             <div style='width:${d.width}px;height:${d.height}px;padding-top:${imageDiffVert - 2}px;padding-left:1px;padding-right:1px'>
-              <div style="font-family: 'Inter', sans-serif;background-color:${color};margin-left:-1px;width:${d.width - 2}px;height:${d.height - imageDiffVert}px;border-radius:10px;border: ${this.highlightedNodeId === d.data.id ? '5px solid #E27396' : '1px solid #E4E2E9'}">
+              <div style="font-family: 'Inter', sans-serif;background-color:${color};margin-left:-1px;width:${d.width - 2}px;height:${d.height - imageDiffVert}px;border-radius:10px;border: ${this.highlightedNodeId === d.data.id ? '5px solid #9c8321' : '1px solid #9c8321'}">
                 <div style="display:flex;justify-content:flex-end;margin-top:5px;margin-right:8px">#${d.data.id}</div>
                 <div style="background-color:${color};margin-top:${-imageDiffVert - 20}px;margin-left:${15}px;border-radius:100px;width:50px;height:50px;"></div>
                 <div style="margin-top:${-imageDiffVert - 20}px;"><img src="${d.data.imageUrl}" style="margin-left:${20}px;border-radius:100px;width:40px;height:40px;" /></div>
-                <div style="font-size:15px;color:#08011E;margin-left:20px;margin-top:10px">${d.data.name}</div>
+                <div style="font-size:15px;color:#032539;margin-left:20px;margin-top:10px">${d.data.name}</div>
                 <div style="color:#9C8321;margin-left:20px;margin-top:3px;font-size:10px;">${d.data.department}</div>
-                <div style="color:#716E7B;margin-left:10px;margin-top:10px;font-size:6px;">${d.data.description}</div>
+                <div style="color:#032539;margin-left:10px;margin-top:10px;font-size:6px;">${d.data.description}</div>
               </div>
             </div>
           `;
@@ -411,9 +412,4 @@ showAddNodeModal() {
 }
 </script>
 
-<!-- Add any necessary styles for your chart container -->
-<style scoped>
-.chart-container {
-  /* Define styles for your chart container */
-}
-</style>
+

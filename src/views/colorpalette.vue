@@ -43,16 +43,16 @@
       </nav>
       <div class="flex justify-around">
         <div class="mt-40">
-          <h1 :style="{ color: textColors[0] }" class="text-5xl font-bold">HAPPY WORKING</h1>
+          <h1 :style="{ color: textColors[0] }" class="text-7xl font-bold">HAPPY WORKING</h1>
 
-          <article :style="{ color: textColors[0] }" class="text-wrap text-slate-300 mt-2">
+          <article :style="{ color: textColors[0] }" class="text-wrap text-slate-300 mt-1">
             <h1>Beloved Manhattan soup stand closes</h1>
             <p>New Yorkers are facing the winter chill...</p>
           </article>
         </div>
         <div></div>
       </div>
-      <div class="item-center justify-center flex mt-10">
+      <div class="item-center justify-center flex mt-[200px]">
         <input class="p-2 rounded-l-lg" type="text" placeholder="type your works email">
         <button :style="{ backgroundColor: buttonColors[0], color: textColors[0] }" class=" rounded-r-2xl bg-slate-50 p-2">Get Started</button>
       </div>

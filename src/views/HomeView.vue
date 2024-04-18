@@ -36,7 +36,7 @@
             class="lg:flex items-center justify-between text-base text-gray-700 pt-4 lg:pt-0 dark:text-slate-400"
           >
             <li>
-              <darkmode class="block " />
+              <darkmode class="block" />
             </li>
             <li>
               <a
@@ -142,53 +142,68 @@
       <section class="mt-12" id="Project">
         <h2 class="text-2xl font-semibold mb-4">Project</h2>
         <p>This is where you can provide a downloadable version of your resume or CV.</p>
-<div class="flex flex-1 space-x-5 mt-3">
-        <div
-          class="max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
-        >
-          <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
-          <div class="p-5">
-            <p class="text-medium mb-5 text-gray-700">
-              Well, aren't you going up to the lake tonight, you've been planning it for two weeks.
-            </p>
-            <button
-              class="w-full rounded-md bg-indigo-600 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
-            >
-              See More
-            </button>
+        <div class="flex flex-1 space-x-5 mt-3">
+          <div
+            class="max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
+          >
+            <img
+              src="/src/img/Screenshot 2024-04-18 122056.png"
+              alt="plant"
+              class="h-auto min-w-[300px]"
+            />
+            <div class="p-5">
+              <P class="font-bold text-center text-lg">Color Palette Portfolio</P>
+              <p class="text-medium mb-5 text-gray-700">
+                The Color Palette Portfolio helps users pick website colors easily. They can try out
+                different combinations using custom palettes, see how they look on a website, and
+                get color codes for use.
+              </p>
+              <a
+                href="https://hazman5540.tech/colorpalette"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  class="w-full rounded-md bg-indigo-600 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
+                >
+                  See More
+                </button>
+              </a>
+            </div>
+          </div>
+          <div
+            class="max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
+          >
+            <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
+            <div class="p-5">
+              <p class="text-medium mb-5 text-gray-700">
+                Well, aren't you going up to the lake tonight, you've been planning it for two
+                weeks.
+              </p>
+              <button
+                class="w-full rounded-md bg-indigo-600 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+          <div
+            class="max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
+          >
+            <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
+            <div class="p-5">
+              <p class="text-medium mb-5 text-gray-700">
+                Well, aren't you going up to the lake tonight, you've been planning it for two
+                weeks.
+              </p>
+              <button
+                class="w-full rounded-md bg-indigo-600 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
+              >
+                See More
+              </button>
+            </div>
           </div>
         </div>
-        <div
-          class="max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
-        >
-          <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
-          <div class="p-5">
-            <p class="text-medium mb-5 text-gray-700">
-              Well, aren't you going up to the lake tonight, you've been planning it for two weeks.
-            </p>
-            <button
-              class="w-full rounded-md bg-indigo-600 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
-            >
-              See More
-            </button>
-          </div>
-        </div>
-        <div
-          class="max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
-        >
-          <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
-          <div class="p-5">
-            <p class="text-medium mb-5 text-gray-700">
-              Well, aren't you going up to the lake tonight, you've been planning it for two weeks.
-            </p>
-            <button
-              class="w-full rounded-md bg-indigo-600 py-2 text-indigo-100 hover:bg-indigo-500 hover:shadow-md duration-75"
-            >
-              See More
-            </button>
-          </div>
-        </div>
-      </div>
       </section>
     </div>
   </main>

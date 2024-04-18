@@ -144,7 +144,7 @@
         <p>This is where you can provide a downloadable version of your resume or CV.</p>
         <div class="flex flex-1 space-x-5 mt-3">
           <div
-            class="max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
+            class="max-w-[300px] overflow-hidden rounded-xl bg-white dark:bg-[#232426] shadow-md duration-200 hover:scale-105 hover:shadow-xl"
           >
             <img
               src="/src/img/Screenshot 2024-04-18 122056.png"
@@ -153,7 +153,7 @@
             />
             <div class="p-5">
               <P class="font-bold text-center text-lg">Color Palette Portfolio</P>
-              <p class="text-medium mb-5 text-gray-700">
+              <p class="text-medium mb-5 text-gray-700 dark:text-slate-400">
                 The Color Palette Portfolio helps users pick website colors easily. They can try out
                 different combinations using custom palettes, see how they look on a website, and
                 get color codes for use.
@@ -172,11 +172,11 @@
             </div>
           </div>
           <div
-            class="max-w-[300px] overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
+            class="max-w-[300px] overflow-hidden rounded-xl bg-white dark:bg-[#232426] shadow-md duration-200 hover:scale-105 hover:shadow-xl"
           >
             <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
             <div class="p-5">
-              <p class="text-medium mb-5 text-gray-700">
+              <p class="text-medium mb-5 text-gray-700  dark:text-slate-400">
                 Well, aren't you going up to the lake tonight, you've been planning it for two
                 weeks.
               </p>
@@ -188,11 +188,11 @@
             </div>
           </div>
           <div
-            class="max-w-sm overflow-hidden rounded-xl bg-white shadow-md duration-200 hover:scale-105 hover:shadow-xl"
+            class="max-w-sm overflow-hidden rounded-xl bg-white  dark:bg-[#232426] shadow-md duration-200 hover:scale-105 hover:shadow-xl"
           >
             <img src="https://i.imgur.com/5dmBrx6.jpg" alt="plant" class="h-auto w-full" />
             <div class="p-5">
-              <p class="text-medium mb-5 text-gray-700">
+              <p class="text-medium mb-5 text-gray-700  dark:text-slate-400">
                 Well, aren't you going up to the lake tonight, you've been planning it for two
                 weeks.
               </p>

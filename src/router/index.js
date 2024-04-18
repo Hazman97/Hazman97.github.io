@@ -5,10 +5,16 @@ import template from '../views/template.vue'
 import templateAlis from '../views/templateAlis.vue'
 import chart from '../views/organizationchart.vue'
 import OrgChart from '../views/colorpalette.vue'
+import vcard from '../views/vcard.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
+    {
+      path: '/vcard',
+      name: 'vcard',
+      component: vcard,
+    },
     {
       path: '/colorpalette',
       name: 'orgchart',

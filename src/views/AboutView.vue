@@ -128,6 +128,6 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style scoped>
 /* If you're using scoped styles, you can place Tailwind CSS here */
 </style>

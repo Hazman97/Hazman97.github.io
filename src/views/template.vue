@@ -24,8 +24,8 @@
     class="mx-auto max-w-full 2xl:max-w-2xl xl:max-w-xl lg:max-w-lg md:max-w-md sm:max-w-sm p-4 bg-gradient-to-b from-[#d3e3ea] to-[#D0DCE1]"
   >
     <div class="text-center mb-8">
-      <h1 class="text-3xl font-bold mb-2 text-[#233945]">Template Manager</h1>
-      <p class="text-[#233945]">Manage your templates</p>
+      <h1 class="text-3xl font-bold mb-2 text-[#233945]">Store Template</h1>
+      <p class="text-[#233945]">to store your template</p>
     </div>
 
     <!-- Add New Template Section -->

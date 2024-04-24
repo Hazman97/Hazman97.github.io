@@ -12,7 +12,7 @@
     >
       Organization Chart
     </h1>
-    <div class="space-x-3 p-1 relative space-y-1 ">
+    <div class="space-x-3 p-1 relative space-y-1">
       <button
         class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="fitChart"
@@ -21,103 +21,195 @@
       </button>
 
       <button
-        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="cycleLayout"
       >
         Change Layout
       </button>
 
       <button
-        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="fullscreen"
       >
         Full Screen
       </button>
       <button
-        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="expandAllNodes"
       >
         Expand All
       </button>
       <button
-        class="border rounded-lg p-1.5 border-gray-500border  border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        class="border rounded-lg p-1.5 border-gray-500border border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
         @click="collapseAllNodes"
       >
-      Collapse All
+        Collapse All
       </button>
-        <!-- Export buttons -->
-        <button class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
-              @click="exportCurrentImage"
+      <!-- Export buttons -->
+      <button
+        class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        @click="exportCurrentImage"
       >
         Export Current
       </button>
 
-      <button class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
-              @click="exportFullImage"
+      <button
+        class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        @click="exportFullImage"
       >
         Export Full
       </button>
 
-      <button class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
-              @click="exportSvg"
+      <button
+        class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        @click="exportSvg"
       >
         Export SVG
       </button>
 
-      <button class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
-              @click="exportPdf"
+      <button
+        class="border rounded-lg p-1.5 border-gray-500 text-gray-800 hover:text-slate-900 hover:bg-slate-200"
+        @click="exportPdf"
       >
         Export PDF
       </button>
-      <button @click="showAddNodeModal" class="bg-[#032539] hover:bg-[#032539c7] text-[#FBF3F2] border rounded-lg p-1.5">
-      Add Node to Root
-    </button>
+      <button
+        @click="showAddNodeModal"
+        class="bg-[#032539] hover:bg-[#032539c7] text-[#FBF3F2] border rounded-lg p-1.5"
+      >
+        Add Node to Root
+      </button>
       <div class="flex pt-1 search:right-2 search:top-2 search:absolute">
-         <input class="p-2  rounded "
-      type="text"
-      placeholder="Search..."
-      v-model="searchQuery"
-      @input="filterChart"
-    />
+        <input
+          class="p-2 rounded"
+          type="text"
+          placeholder="Search..."
+          v-model="searchQuery"
+          @input="filterChart"
+        />
       </div>
-     
     </div>
-    <div v-if="isAddNodeModalOpen" class="modal fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex justify-center items-center " @click.self="closeAddNodeModal">
+    <div
+      v-if="isAddNodeModalOpen"
+      class="modal fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex justify-center items-center"
+      @click.self="closeAddNodeModal"
+    >
       <div class="modal-content bg-white rounded-lg p-8">
-        <span @click="closeAddNodeModal" class="close absolute top-0 right-0 mt-4 mr-4 text-gray-600 cursor-pointer">&times;</span>
+        <span
+          @click="closeAddNodeModal"
+          class="close absolute top-0 right-0 mt-4 mr-4 text-gray-600 cursor-pointer"
+          >&times;</span
+        >
         <h2 class="text-xl font-bold mb-4">Add Node</h2>
         <div class="mb-4">
           <label for="nodeId" class="block text-gray-700 font-bold mb-2">Node ID:</label>
-          <input type="text" id="nodeId" v-model="newNode.id" class="border rounded-md px-4 py-2 w-full">
+          <input
+            type="text"
+            id="nodeId"
+            v-model="newNode.id"
+            class="border rounded-md px-4 py-2 w-full"
+          />
         </div>
         <div class="mb-4">
           <label for="nodeName" class="block text-gray-700 font-bold mb-2">Node Name:</label>
-          <input type="text" id="nodeName" v-model="newNode.name" class="border rounded-md px-4 py-2 w-full">
+          <input
+            type="text"
+            id="nodeName"
+            v-model="newNode.name"
+            class="border rounded-md px-4 py-2 w-full"
+          />
         </div>
         <div class="mb-4">
           <label for="nodeName" class="block text-gray-700 font-bold mb-2">Parent Id:</label>
-          <input type="text" id="nodeNameda" v-model="newNode.parentId" class="border rounded-md px-4 py-2 w-full">
+          <input
+            type="text"
+            id="nodeNameda"
+            v-model="newNode.parentId"
+            class="border rounded-md px-4 py-2 w-full"
+          />
         </div>
         <!-- Add more input fields for other properties if needed -->
-        <button @click="addNodeToRoot" class="bg-[#FA991C] hover:bg-[#FA991C] text-white font-bold py-2 px-4 rounded">
+        <button
+          @click="addNodeToRoot"
+          class="bg-[#FA991C] hover:bg-[#FA991C] text-white font-bold py-2 px-4 rounded"
+        >
           Add Node
         </button>
       </div>
     </div>
+    <!-- Your template -->
+   <!-- Your template -->
+   <div
+    v-if="isClickModal"
+    class="modal fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-75 flex justify-center items-center"
+    @click.self="closeClickModal"
+  >
+    <div class="modal-content bg-white rounded-lg p-8">
+      <!-- Modal header -->
+      <!-- Your existing modal header content -->
 
-    <div ref="chartContainer">
-      
+      <!-- Modal content -->
+      <div class="mb-4">
+        <label for="nodeId" class="block text-gray-700 font-bold mb-2">Node ID:</label>
+        <input
+          type="text"
+          id="nodeId"
+          v-model="clickedNodeData.id"
+          :disabled="!isEditMode" 
+          class="border rounded-md px-4 py-2 w-full"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="nodeName" class="block text-gray-700 font-bold mb-2">Node Name:</label>
+        <input
+          type="text"
+          id="nodeName"
+          v-model="clickedNodeData.name"
+          :disabled="!isEditMode" 
+          class="border rounded-md px-4 py-2 w-full"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="nodeParentId" class="block text-gray-700 font-bold mb-2">Parent ID:</label>
+        <input
+          type="text"
+          id="nodeParentId"
+          v-model="clickedNodeData.parentId"
+          :disabled="!isEditMode"
+          class="border rounded-md px-4 py-2 w-full"
+        />
+      </div>
+      <!-- Add/Edit node button -->
+      <button
+  @click="toggleEditMode"
+  class="bg-[#FA991C] hover:bg-[#FA991C] text-white font-bold py-2 px-4 rounded"
+>
+  {{ isEditMode ? 'Save' : 'Edit' }} <!-- Change button text based on edit mode -->
+</button>
+
+      <!-- Delete node button -->
+      <button
+  @click="deleteNode(clickedNodeData.id)"
+  class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded ml-2"
+>
+  Delete
+</button>
+
     </div>
+  </div>
+
+
+    <div ref="chartContainer"></div>
   </div>
 </template>
 
 <script>
+import axios from 'axios'
 import { OrgChart } from 'd3-org-chart'
 // import axios from 'axios'
 import employeesData from '../views/data'
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
-
+import html2canvas from 'html2canvas'
+import jsPDF from 'jspdf'
 
 export default {
   name: 'TestComponent',
@@ -127,8 +219,13 @@ export default {
       newNode: {
         id: '',
         name: '',
-        parentId:'',
+        parentId: ''
         // Add more properties as needed
+      },
+      clickedNodeData: {
+        id: '',
+        name: '',
+        parentId: ''
       },
       data: [],
       chartReference: null,
@@ -137,15 +234,67 @@ export default {
       isFullscreen: false,
       highlightedNodeId: null,
       searchQuery: '',
-      isChartMinimized: false, 
+      isChartMinimized: false,
       chart: null,
-      
+      isClickModal: false,
+      isEditMode: false,
     }
   },
   created() {
     this.fetchData()
   },
   methods: {
+    toggleEditMode() {
+    if (this.isEditMode) {
+      this.saveNode(); // Call saveNode method if in edit mode
+    } else {
+      this.isEditMode = !this.isEditMode; // Toggle edit mode
+    }
+  },
+    async saveNode() {
+    try {
+      // Assuming you have an API endpoint for updating nodes
+      const response = await axios.put('your_api_endpoint_here', {
+        id: this.clickedNodeData.id,
+        name: this.clickedNodeData.name,
+        parentId: this.clickedNodeData.parentId,
+        // Add other properties as needed
+      });
+      
+      console.log('Node updated successfully:', response.data);
+      this.isClickModal = false; // Close the modal after successful update
+    } catch (error) {
+      console.error('Error updating node:', error);
+    }
+  },
+  deleteNode(nodeId) {
+    // Find the index of the node with the specified ID in the data array
+    const nodeIndex = this.data.findIndex(node => node.id === nodeId);
+
+    // If the node with the specified ID is found
+    if (nodeIndex !== -1) {
+      // Remove the node from the data array
+      this.data.splice(nodeIndex, 1);
+      // Re-render the chart to reflect the changes
+      this.renderChart();
+      // Close any modal or reset any state related to the deleted node if needed
+      this.isClickModal = false;
+    } else {
+      console.error('Node not found:', nodeId);
+    }
+  },
+
+    closeClickModal() {
+      this.isClickModal = false
+    },
+    addNode() {
+      // Here you can implement the logic to add the node based on this.clickedNodeData
+      // For example, you can call an API to add the node to your data source
+      console.log('Adding node:', this.clickedNodeData)
+
+      // After adding the node, you might want to close the modal
+      this.isClickModal = false
+    },
     fetchData() {
       //   axios
       //     .get('http://localhost:3000/employees')
@@ -170,7 +319,7 @@ export default {
     },
     renderChart() {
       if (!this.chartReference) {
-        this.chartReference = new OrgChart();
+        this.chartReference = new OrgChart()
       }
       this.chartReference
         .container(this.$refs.chartContainer)
@@ -182,9 +331,9 @@ export default {
         .compactMarginPair(() => 30)
         .neighbourMargin(() => 20)
         .nodeContent((d) => {
-          const color = '#FBF3F2';
-          
-          const imageDiffVert = 25 + 2;
+          const color = '#FBF3F2'
+
+          const imageDiffVert = 25 + 2
           return `
             <div style='width:${d.width}px;height:${d.height}px;padding-top:${imageDiffVert - 2}px;padding-left:1px;padding-right:1px'>
               <div style="font-family: 'Inter', sans-serif;background-color:${color};margin-left:-1px;width:${d.width - 2}px;height:${d.height - imageDiffVert}px;border-radius:10px;border: ${this.highlightedNodeId === d.data.id ? '5px solid #9c8321' : '1px solid #9c8321'}">
@@ -196,11 +345,29 @@ export default {
                 <div style="color:#032539;margin-left:10px;margin-top:10px;font-size:6px;">${d.data.description}</div>
               </div>
             </div>
-          `;
+          `
         })
         .layout(this.layoutPositions[this.layoutIndex])
-        .render();
-        console.log("Chart rendered:", this.chartReference);
+        .render()
+        this.chartReference.onNodeClick((node) => {
+  // Assuming `node` contains the data directly
+  this.clickedNodeData = {
+    id: node.data.id,
+    parentId: node.data.parentId,
+    name: node.data.name,
+    positionName: node.data.positionName,
+    phone: node.data.phone
+  };
+
+  // Log the clicked node data for debugging
+  console.log('Clicked Node Data:', this.clickedNodeData);
+
+  // Open the add node modal
+  this.isClickModal = true;
+});
+
+
+      console.log('Chart rendered:', this.chartReference)
     },
     fitChart() {
       if (this.chartReference) {
@@ -267,149 +434,138 @@ export default {
       this.renderChart()
     },
     filterChart(event) {
-  const value = event.target.value.toLowerCase();
-  const chart = this.chartReference;
+      const value = event.target.value.toLowerCase()
+      const chart = this.chartReference
 
-  // Clear previous highlighting
-  chart.clearHighlighting();
+      // Clear previous highlighting
+      chart.clearHighlighting()
 
-  // Get chart nodes
-  const data = chart.data();
-  let foundNode = null;
+      // Get chart nodes
+      const data = chart.data()
+      let foundNode = null
 
-  // Un-minimize the chart if it's currently minimized
- 
+      // Un-minimize the chart if it's currently minimized
 
-  // Loop over data and check if input value matches any name
-  data.forEach((d) => {
-    if (value !== '' && d.name && d.name.toLowerCase().includes(value)) {
-      // If matches, mark node as highlighted
-      d._highlighted = true;
-      d._expanded = true;
-      // Keep track of the first matching node found
-      if (!foundNode) {
-        foundNode = d;
+      // Loop over data and check if input value matches any name
+      data.forEach((d) => {
+        if (value !== '' && d.name && d.name.toLowerCase().includes(value)) {
+          // If matches, mark node as highlighted
+          d._highlighted = true
+          d._expanded = true
+          // Keep track of the first matching node found
+          if (!foundNode) {
+            foundNode = d
+          }
+        }
+      })
+
+      // Update data and re-render the chart
+      chart.data(data).render().fit()
+
+      // If a matching node is found, navigate to it
+      if (foundNode) {
+        // Delay focusing on the node to ensure it's rendered
+        setTimeout(() => {
+          const nodeElement = document.querySelector(`[data-node-id="${foundNode.id}"]`)
+          if (nodeElement) {
+            nodeElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' })
+          }
+        }, 200) // Adjust delay as needed
       }
-    }
-  });
-
-  // Update data and re-render the chart
-  chart.data(data).render().fit();
-
-  // If a matching node is found, navigate to it
-  if (foundNode) {
-    // Delay focusing on the node to ensure it's rendered
-    setTimeout(() => {
-      const nodeElement = document.querySelector(`[data-node-id="${foundNode.id}"]`);
-      if (nodeElement) {
-        nodeElement.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'center' });
+    },
+    expandAllNodes() {
+      if (this.chartReference) {
+        this.chartReference.expandAll().fit()
       }
-    }, 200); // Adjust delay as needed
-  }
-},
-expandAllNodes() {
-  if (this.chartReference) {
-    this.chartReference.expandAll().fit();
-  }
-},
-collapseAllNodes() {
-  if (this.chartReference) {
-    this.chartReference.collapseAll().fit();
-  }
-},
-exportCurrentImage() {
-  console.log("Exporting current image...");
-  if (this.chartReference) {
-    this.chartReference.exportImg({
-      save: true,
-      format: 'png',
-      quality: 1,
-      full: false,
-      background: '#ffffff',
-      width: null,
-      height: null,
-      filename: 'chart',
-      style: {
-        'font-family': 'Arial',
-        'font-size': '12px',
-        'text-align': 'left',
-        'background-color': '#ffffff',
-      },
-    });
-  }
-},
+    },
+    collapseAllNodes() {
+      if (this.chartReference) {
+        this.chartReference.collapseAll().fit()
+      }
+    },
+    exportCurrentImage() {
+      console.log('Exporting current image...')
+      if (this.chartReference) {
+        this.chartReference.exportImg({
+          save: true,
+          format: 'png',
+          quality: 1,
+          full: false,
+          background: '#ffffff',
+          width: null,
+          height: null,
+          filename: 'chart',
+          style: {
+            'font-family': 'Arial',
+            'font-size': '12px',
+            'text-align': 'left',
+            'background-color': '#ffffff'
+          }
+        })
+      }
+    },
 
-exportFullImage() {
-  console.log("Exporting full image...");
-  if (this.chartReference) {
-    this.chartReference.exportImg({
-      save: true,
-      format: 'png',
-      quality: 1,
-      full: true,
-      background: '#ffffff',
-      width: null,
-      height: null,
-      filename: 'chart',
-      style: {
-        'font-family': 'Arial',
-        'font-size': '12px',
-        'text-align': 'left',
-        'background-color': '#ffffff',
-      },
-    });
-  }
-},
-exportSvg() {
-  if (this.chartReference) {
-    this.chartReference.exportSvg();
-  }
-},
-exportPdf() {
-  const chartContainer = this.$refs.chartContainer;
+    exportFullImage() {
+      console.log('Exporting full image...')
+      if (this.chartReference) {
+        this.chartReference.exportImg({
+          save: true,
+          format: 'png',
+          quality: 1,
+          full: true,
+          background: '#ffffff',
+          width: null,
+          height: null,
+          filename: 'chart',
+          style: {
+            'font-family': 'Arial',
+            'font-size': '12px',
+            'text-align': 'left',
+            'background-color': '#ffffff'
+          }
+        })
+      }
+    },
+    exportSvg() {
+      if (this.chartReference) {
+        this.chartReference.exportSvg()
+      }
+    },
+    exportPdf() {
+      const chartContainer = this.$refs.chartContainer
 
-  if (chartContainer) {
-    html2canvas(chartContainer).then(canvas => {
-      const imgData = canvas.toDataURL('image/jpeg', 1.0);
-      const pdf = new jsPDF();
-      const width = pdf.internal.pageSize.getWidth();
-      const height = (canvas.height * width) / canvas.width;
-      pdf.addImage(imgData, 'JPEG', 0, 0, width, height);
-      pdf.save('chart.pdf');
-    });
-  }
-
-
-},
-showAddNodeModal() {
-      this.isAddNodeModalOpen = true;
+      if (chartContainer) {
+        html2canvas(chartContainer).then((canvas) => {
+          const imgData = canvas.toDataURL('image/jpeg', 1.0)
+          const pdf = new jsPDF()
+          const width = pdf.internal.pageSize.getWidth()
+          const height = (canvas.height * width) / canvas.width
+          pdf.addImage(imgData, 'JPEG', 0, 0, width, height)
+          pdf.save('chart.pdf')
+        })
+      }
+    },
+    showAddNodeModal() {
+      this.isAddNodeModalOpen = true
     },
     closeAddNodeModal() {
-      this.isAddNodeModalOpen = false;
+      this.isAddNodeModalOpen = false
     },
     addNodeToRoot() {
       if (this.chartReference) {
         // Call the method to add a node to the root with the values from the form
-        this.chartReference.addNode(this.newNode).render();
+        this.chartReference.addNode(this.newNode).render()
         // Reset the form values
         this.newNode = {
           id: '',
           name: '',
-          parentId: '',
+          parentId: ''
           // Reset other properties as needed
-        };
+        }
         // Close the modal
-        this.closeAddNodeModal();
+        this.closeAddNodeModal()
       }
     }
-
-
-
-
-
-
   }
 }
 </script>
-
-

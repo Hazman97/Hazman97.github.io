@@ -78,25 +78,35 @@
       </div>
     </header>
   </div>
-  <main class="bg-gray-200 min-h-screen flex justify-center items-center dark:bg-[#151618]">
-    <div class="max-w-4xl mx-auto px-4">
+  <main class="bg-[#F4F4F2] min-h-screen flex justify-center items-center dark:bg-[#151618]">
+    <div class="max-w-4xl mx-auto px-4"> 
       <!-- Home Section -->
-      <div class="bg-slate-200 dark:bg-[#151618]">
+      <div class=" dark:bg-[#151618]">
         <div class="my-5 min-h-screen flex flex-wrap justify-center items-center">
           <section class="text-center flex-initial w-full sm:w-3/4 px-4" id="home">
             <h1
-              class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-slate-200"
+              class="text-4xl sm:text-4xl md:text-6xl font-semibold text-gray-900 mb-4 dark:text-slate-200"
             >
-              Hi there!
+              Hi!
             </h1>
-            <p class="text-lg text-gray-700 mb-8 dark:text-slate-400">
+            <h2  class="text-4xl sm:text-4xl md:text-4xl font-semibold text-gray-900 mb-4 dark:text-slate-200"
+           >I'm Hazman Adanan</h2>
+            <h1  class="text-4xl sm:text-4xl md:text-3xl  text-gray-900 mb-4 dark:text-slate-200"
+           >Frontend Developer</h1>
+          <button class="px-2 rounded-md py-2 text-gray-500 hover:shadow-md duration-75">
+            <a href="#about" ><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+</svg>
+</a>
+          </button>
+            <!-- <p class="text-lg text-gray-700 mb-8 dark:text-slate-400">
               I'm a front-end enthusiast gaining practical experience in the field. After completing
               an internship, I've transitioned into a role as a Front End Developer. Passionate
               about web development, I'm also intrigued by networking and computer support
               technology. With a solid foundation in these areas and a commitment to ongoing
               learning, I'm eager to explore opportunities that allow me to contribute to both
               front-end development and IT support roles.
-            </p>
+            </p> -->
           </section>
           <div class="flex-initial w-full md:w-1/4 px-4 text-center">
             <img
@@ -110,16 +120,20 @@
     </div>
   </main>
   <main
-    class="bg-gray-100 max-h-screen flex justify-start items-start dark:bg-[#232426] dark:text-slate-300"
+    class="bg-[#F4F4F2] max-h-screen flex justify-start items-start dark:bg-[#232426] dark:text-slate-300"
   >
     <div class="max-w-4xl 2xl:mx-40 xl:mx-40 mx-auto px-4">
       <!-- About Section -->
       <section class="py-20" id="about">
         <h2 class="flex-start text-2xl font-semibold">About Me</h2>
-        <p>
-          This is where you can introduce yourself and describe your skills, experiences, and
-          interests.
-        </p>
+          <p class="text-lg text-gray-700 mb-8 dark:text-slate-400">
+              I'm a front-end enthusiast gaining practical experience in the field. After completing
+              an internship, I've transitioned into a role as a Front End Developer. Passionate
+              about web development, I'm also intrigued by networking and computer support
+              technology. With a solid foundation in these areas and a commitment to ongoing
+              learning, I'm eager to explore opportunities that allow me to contribute to both
+              front-end development and IT support roles.
+            </p>
       </section>
     </div>
   </main>

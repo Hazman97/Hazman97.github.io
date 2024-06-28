@@ -41,7 +41,7 @@ const router = createRouter({
       component: template
     },
     {
-      path: '/alis',
+      path: '/man',
       name: 'templateAlis',
       component: templateAlis
     },

@@ -1,11 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import HomeView from '../views/version1/HomeView.vue'
 import darkmode from "../components/ThemeSwitcher.vue"
-import template from '../views/template.vue'
-import templateAlis from '../views/templateAlis.vue'
+import template from '../views/version1/template.vue'
+import templateAlis from '../views/version1/templateAlis.vue'
 import chart from '../views/organizationchart.vue'
-import OrgChart from '../views/colorpalette.vue'
-import vcard from '../views/vcard.vue'
+import OrgChart from '../views/version1/colorpalette.vue'
+import vcard from '../views/version1/vcard.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -51,7 +51,7 @@ const router = createRouter({
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/version1/AboutView.vue')
     }
   ]
 })

@@ -356,7 +356,7 @@
 </template>
 
 <script>
-import darkmode from '../components/ThemeSwitcher.vue'
+import darkmode from '@/components/ThemeSwitcher.vue'
 export default {
   components: {
     darkmode
